@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'Login.dart';
+import 'IntroductionScreen.dart';
 
 class SplashScreenPage extends StatefulWidget {
   @override
@@ -19,7 +19,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
     return Timer(duration, () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (_) {
-          return Login();
+          return OnBoardingPage();
         }),
       );
     });
@@ -30,7 +30,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
     return Scaffold(
       backgroundColor: Color(0xfff9f9f9),
       body: Center(
-        child: Image.asset("images/logo.png", width: 150.0),
+        child: Image.asset("assets/images/logo.png", width: 150.0),
       ),
     );
   }
