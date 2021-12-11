@@ -12,12 +12,6 @@ class OnBoardingPage extends StatefulWidget {
 class _OnBoardingPageState extends State<OnBoardingPage> {
   final introKey = GlobalKey<IntroductionScreenState>();
 
-  // void _onIntroEnd(context) {
-  //   Navigator.of(context).push(
-  //     MaterialPageRoute(builder: (_) => HomePage()),
-  //   );
-  // }
-
   void _onIntroEnd(context) {
     Navigator.of(context).pushAndRemoveUntil(
         MaterialPageRoute(builder: (context) {
@@ -25,17 +19,13 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
     }), (Route<dynamic> route) => false);
   }
 
-  Widget _buildImage(String assetName) {
-    return Align(
-      child: Image.asset('$assetName', width: 250.0),
-      alignment: Alignment(0.0, 1.0),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     const bodyStyle = TextStyle(
-        fontSize: 18.0, fontWeight: FontWeight.w600, color: Color(0xFF2075BF));
+      fontSize: 20.0,
+      fontWeight: FontWeight.w700,
+      color: Color(0xFF2075BF),
+    );
 
     const pageDecoration = const PageDecoration(
       titleTextStyle: TextStyle(fontSize: 28.0, fontWeight: FontWeight.w700),
@@ -53,8 +43,8 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
           title: "",
           body: "Berbagi dan mengembangkan bersama-sama",
           image: Align(
-            child: Image.asset('assets/images/intro-1.png', width: 250.0),
-            alignment: Alignment(0.0, 5.0),
+            child: Image.asset('assets/images/intro-1.png', width: 260.0),
+            alignment: Alignment(0.0, 2.2),
           ),
           decoration: pageDecoration,
         ),
@@ -72,7 +62,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
           body: "Mendapatkan ide dan inpirasi dengan mudah",
           image: Align(
             child: Image.asset('assets/images/intro3.png', width: 260.0),
-            alignment: Alignment(0.0, 2.5),
+            alignment: Alignment(0.0, 2.0),
           ),
           decoration: pageDecoration,
         ),
