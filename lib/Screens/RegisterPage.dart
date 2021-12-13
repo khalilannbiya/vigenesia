@@ -243,7 +243,7 @@ class _RegisterPageState extends State<RegisterPage> {
             SizedBox(
               height: 50,
             ),
-            MaterialButton(
+            ElevatedButton(
               onPressed: () async {
                 await postRegister(nameController.text, profesiController.text,
                         emailController.text, passwordController.text)
@@ -271,18 +271,19 @@ class _RegisterPageState extends State<RegisterPage> {
                             }
                         });
               },
-              height: 45,
-              color: Color(0xFF2075BF),
+              style: ElevatedButton.styleFrom(
+                primary: Color(0xFF2075BF),
+                padding: EdgeInsets.symmetric(vertical: 13, horizontal: 90),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+              ),
               child: Text(
                 "Sign Up",
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: 17.0,
                     fontWeight: FontWeight.w600),
-              ),
-              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 90),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
               ),
             ),
             SizedBox(
