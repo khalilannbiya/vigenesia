@@ -3,12 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:vigenesia/Constant/const.dart';
 import 'package:another_flushbar/flushbar.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:dio/dio.dart';
+import 'package:vigenesia/Screens/Register.dart';
 import 'package:vigenesia/Screens/RegisterPage.dart';
 import 'MainScreens.dart';
-import 'package:flutter/gestures.dart';
 import 'dart:convert';
 import 'package:vigenesia/Models/Login_Model.dart';
 

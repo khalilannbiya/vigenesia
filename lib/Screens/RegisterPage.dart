@@ -6,7 +6,6 @@ import 'package:another_flushbar/flushbar.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:dio/dio.dart';
 import 'package:vigenesia/Screens/LoginPage.dart';
-import 'package:flutter/gestures.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({Key key}) : super(key: key);
@@ -16,6 +15,8 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
+  // Ganti Base URL
+
   String baseurl = url;
 
   Future postRegister(
@@ -30,7 +31,7 @@ class _RegisterPageState extends State<RegisterPage> {
     };
 
     try {
-      final response = await dio.post("$baseurl/api/registrai",
+      final response = await dio.post("$baseurl/api/registrasi",
           data: data,
           options: Options(headers: {'Content-type': 'application/json'}));
 
@@ -199,7 +200,8 @@ class _RegisterPageState extends State<RegisterPage> {
                         height: 20,
                       ),
                       FormBuilderTextField(
-                        obscureText: true,
+                        obscureText:
+                            true, // <-- Buat bikin setiap inputan jadi bintang " * "
                         name: "password",
                         controller: passwordController,
                         cursorColor: Color(0xFF2075BF),
@@ -251,7 +253,7 @@ class _RegisterPageState extends State<RegisterPage> {
                               setState(() {
                                 Navigator.pop(context);
                                 Flushbar(
-                                  message: "Berhasil Regitrasi",
+                                  message: "Berhasil Registrasi",
                                   duration: Duration(seconds: 2),
                                   backgroundColor: Colors.greenAccent,
                                   flushbarPosition: FlushbarPosition.TOP,
