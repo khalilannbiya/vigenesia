@@ -6,8 +6,8 @@ import 'package:another_flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:dio/dio.dart';
+import 'package:vigenesia/Screens/RegisterPage.dart';
 import 'MainScreens.dart';
-import 'Register.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:convert';
 import 'package:vigenesia/Models/Login_Model.dart';
@@ -299,7 +299,7 @@ class _LoginPageState extends State<LoginPage> {
                 Navigator.push(
                     context,
                     new MaterialPageRoute(
-                        builder: (BuildContext context) => new Register()));
+                        builder: (BuildContext context) => new RegisterPage()));
               },
               borderSide: BorderSide(color: Color(0xFF2075BF)),
               splashColor: Color(0xFFF9F9F9),
@@ -311,7 +311,7 @@ class _LoginPageState extends State<LoginPage> {
                     fontSize: 17.0,
                     fontWeight: FontWeight.w600),
               ),
-              padding: EdgeInsets.symmetric(vertical: 13, horizontal: 60),
+              padding: EdgeInsets.symmetric(vertical: 13, horizontal: 55),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0),
               ),
