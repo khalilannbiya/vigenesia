@@ -209,7 +209,7 @@ class _LoginPageState extends State<LoginPage> {
                         controller: passwordController,
                         cursorColor: Color(0xFF2075BF),
                         decoration: InputDecoration(
-                          contentPadding: EdgeInsets.all(0.0),
+                          contentPadding: EdgeInsets.only(top: 20.0),
                           labelText: 'Password',
                           hintText: 'Password',
                           hintStyle: TextStyle(
