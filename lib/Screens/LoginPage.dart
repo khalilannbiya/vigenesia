@@ -68,14 +68,29 @@ class _LoginPageState extends State<LoginPage> {
         body: SingleChildScrollView(
       //  untuk bisa scroll
       child: Padding(
-        padding: EdgeInsets.all(20.0),
+        padding: EdgeInsets.fromLTRB(20.0, 40.0, 20.0, 20.0),
         child: Column(
           children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                SafeArea(
+                  child: Text(
+                    "Welcome!!",
+                    style: TextStyle(
+                      color: Color(0xFF2075BF),
+                      fontSize: 30.0,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+              ],
+            ),
             SizedBox(
               height: 50,
             ),
             Container(
-              height: 350,
+              height: 300,
               child: Stack(children: [
                 Positioned(
                   top: 0,
@@ -90,7 +105,7 @@ class _LoginPageState extends State<LoginPage> {
                     curve: Curves.linear,
                     child: Image.network(
                       'https://ouch-cdn2.icons8.com/As6ct-Fovab32SIyMatjsqIaIjM9Jg1PblII8YAtBtQ/rs:fit:784:784/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvNTg4/LzNmMDU5Mzc0LTky/OTQtNDk5MC1hZGY2/LTA2YTkyMDZhNWZl/NC5zdmc.png',
-                      height: 400,
+                      height: 300,
                     ),
                   ),
                 ),
@@ -105,7 +120,7 @@ class _LoginPageState extends State<LoginPage> {
                     curve: Curves.linear,
                     child: Image.network(
                       'https://ouch-cdn2.icons8.com/vSx9H3yP2D4DgVoaFPbE4HVf6M4Phd-8uRjBZBnl83g/rs:fit:784:784/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvNC84/MzcwMTY5OS1kYmU1/LTQ1ZmEtYmQ1Ny04/NTFmNTNjMTlkNTcu/c3Zn.png',
-                      height: 400,
+                      height: 300,
                     ),
                   ),
                 ),
@@ -120,7 +135,7 @@ class _LoginPageState extends State<LoginPage> {
                     curve: Curves.linear,
                     child: Image.network(
                       'https://ouch-cdn2.icons8.com/fv7W4YUUpGVcNhmKcDGZp6pF1-IDEyCjSjtBB8-Kp_0/rs:fit:784:784/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvMTUv/ZjUzYTU4NDAtNjBl/Yy00ZWRhLWE1YWIt/ZGM1MWJmYjBiYjI2/LnN2Zw.png',
-                      height: 400,
+                      height: 300,
                     ),
                   ),
                 ),
@@ -135,14 +150,14 @@ class _LoginPageState extends State<LoginPage> {
                     curve: Curves.linear,
                     child: Image.network(
                       'https://ouch-cdn2.icons8.com/AVdOMf5ui4B7JJrNzYULVwT1z8NlGmlRYZTtg1F6z9E/rs:fit:784:767/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvOTY5/L2NlMTY1MWM5LTRl/ZjUtNGRmZi05MjQ3/LWYzNGQ1MzhiOTQ0/Mi5zdmc.png',
-                      height: 400,
+                      height: 300,
                     ),
                   ),
                 )
               ]),
             ),
             SizedBox(
-              height: 50,
+              height: 30,
             ),
             Center(
               child: Form(
@@ -156,12 +171,12 @@ class _LoginPageState extends State<LoginPage> {
                         controller: emailController,
                         cursorColor: Color(0xFF2075BF),
                         decoration: InputDecoration(
-                          contentPadding: EdgeInsets.all(0.0),
+                          contentPadding: EdgeInsets.only(top: 20.0),
                           labelText: 'Email',
                           hintText: 'Username or E-Mail',
                           labelStyle: TextStyle(
                             color: Color(0xFF2075BF),
-                            fontSize: 15.0,
+                            fontSize: 16.0,
                             fontWeight: FontWeight.w600,
                           ),
                           hintStyle: TextStyle(
@@ -203,7 +218,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           labelStyle: TextStyle(
                             color: Color(0xFF2075BF),
-                            fontSize: 15.0,
+                            fontSize: 16.0,
                             fontWeight: FontWeight.w600,
                           ),
                           prefixIcon: Icon(
