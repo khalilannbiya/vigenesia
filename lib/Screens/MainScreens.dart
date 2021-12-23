@@ -135,7 +135,7 @@ class _MainScreensState extends State<MainScreens> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Hallo  ${widget.nama}",
+                          "Hallo  ${widget.nama}".toUpperCase(),
                           style: TextStyle(
                               fontSize: 22, fontWeight: FontWeight.w500),
                         ),
@@ -234,8 +234,18 @@ class _MainScreensState extends State<MainScreens> {
                                             shrinkWrap: true,
                                             children: [
                                               Container(
-                                                  child:
-                                                      Text(item.isiMotivasi)),
+                                                  padding: EdgeInsets.all(10.0),
+                                                  decoration: BoxDecoration(
+                                                    border: Border.all(
+                                                      color: Colors.black,
+                                                    ),
+                                                    color: Colors.blueAccent,
+                                                  ),
+                                                  child: Text(
+                                                    item.isiMotivasi,
+                                                    style: TextStyle(
+                                                        color: Colors.white),
+                                                  )),
                                             ],
                                           ),
                                         ),

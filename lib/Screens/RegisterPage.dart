@@ -67,7 +67,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     "JoinWith Us",
                     style: TextStyle(
                       color: Color(0xFF2075BF),
-                      fontSize: 30.0,
+                      fontSize: 29.0,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -78,7 +78,11 @@ class _RegisterPageState extends State<RegisterPage> {
               height: 40,
             ),
             Container(
-                height: 300, child: Image.asset("assets/images/register.png")),
+                height: 300,
+                child: Image.asset(
+                  "assets/images/register.png",
+                  width: 300.0,
+                )),
             SizedBox(
               height: 20,
             ),
