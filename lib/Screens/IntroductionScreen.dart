@@ -22,7 +22,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
   @override
   Widget build(BuildContext context) {
     const bodyStyle = TextStyle(
-      fontSize: 20.0,
+      fontSize: 21.0,
       fontWeight: FontWeight.w700,
       color: Color(0xFF2075BF),
     );
@@ -74,12 +74,16 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
       nextFlex: 0,
       //rtl: true, // Display as right-to-left
       skip: const Text('Skip',
-          style:
-              TextStyle(fontWeight: FontWeight.w600, color: Color(0xFF2075BF))),
+          style: TextStyle(
+              fontSize: 16.0,
+              fontWeight: FontWeight.w700,
+              color: Color(0xFF2075BF))),
       next: const Icon(Icons.arrow_forward, color: Color(0xFF2075BF)),
       done: const Text('Done',
-          style:
-              TextStyle(fontWeight: FontWeight.w600, color: Color(0xFF2075BF))),
+          style: TextStyle(
+              fontSize: 16.0,
+              fontWeight: FontWeight.w700,
+              color: Color(0xFF2075BF))),
       curve: Curves.fastLinearToSlowEaseIn,
       controlsMargin: const EdgeInsets.all(16),
       controlsPadding: kIsWeb
