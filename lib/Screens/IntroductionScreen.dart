@@ -1,5 +1,5 @@
 import 'dart:ui';
-import 'Login.dart';
+import 'package:vigenesia/Screens/LoginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:flutter/foundation.dart';
@@ -15,7 +15,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
   void _onIntroEnd(context) {
     Navigator.of(context).pushAndRemoveUntil(
         MaterialPageRoute(builder: (context) {
-      return Login();
+      return LoginPage();
     }), (Route<dynamic> route) => false);
   }
 
@@ -44,7 +44,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
           body: "Berbagi dan mengembangkan bersama-sama",
           image: Align(
             child: Image.asset('assets/images/intro-1.png', width: 260.0),
-            alignment: Alignment(0.0, 2.7),
+            alignment: Alignment(0.0, 2.2),
           ),
           decoration: pageDecoration,
         ),

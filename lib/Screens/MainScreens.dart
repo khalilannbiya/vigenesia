@@ -5,7 +5,7 @@ import 'package:vigenesia/Screens/EditPage.dart';
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
-import 'Login.dart';
+import 'package:vigenesia/Screens/LoginPage.dart';
 import 'package:vigenesia/Constant/const.dart';
 import 'package:another_flushbar/flushbar.dart';
 
@@ -135,7 +135,7 @@ class _MainScreensState extends State<MainScreens> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Hallo  ${widget.nama}",
+                          "Hallo  ${widget.nama}".toUpperCase(),
                           style: TextStyle(
                               fontSize: 22, fontWeight: FontWeight.w500),
                         ),
@@ -147,7 +147,7 @@ class _MainScreensState extends State<MainScreens> {
                                   context,
                                   new MaterialPageRoute(
                                       builder: (BuildContext context) =>
-                                          new Login()));
+                                          new LoginPage()));
                             })
                       ],
                     ),
@@ -234,8 +234,18 @@ class _MainScreensState extends State<MainScreens> {
                                             shrinkWrap: true,
                                             children: [
                                               Container(
-                                                  child:
-                                                      Text(item.isiMotivasi)),
+                                                  padding: EdgeInsets.all(10.0),
+                                                  decoration: BoxDecoration(
+                                                    border: Border.all(
+                                                      color: Colors.black,
+                                                    ),
+                                                    color: Colors.blueAccent,
+                                                  ),
+                                                  child: Text(
+                                                    item.isiMotivasi,
+                                                    style: TextStyle(
+                                                        color: Colors.white),
+                                                  )),
                                             ],
                                           ),
                                         ),

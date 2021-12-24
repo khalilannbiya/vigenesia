@@ -4,8 +4,8 @@
    <application
   
       android:usesCleartextTraffic="true"
-        android:label="vigenesia"
-        android:icon="@mipmap/ic_launcher">
+        android:label="Vigenesia"
+        android:icon="@mipmap/logo_vigenesia">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
